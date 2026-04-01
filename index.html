@@ -51,13 +51,6 @@
       letter-spacing:0.14em;
     }
 
-    .submark{
-      font-size:12px;
-      color:var(--muted);
-      letter-spacing:0.08em;
-      white-space:nowrap;
-    }
-
     .hero{
       padding:34px 0 48px;
       border-top:1px solid var(--line);
@@ -78,26 +71,6 @@
       font-size:clamp(15px, 2vw, 19px);
       line-height:1.85;
       color:#202020;
-    }
-
-    .section-head{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:12px;
-      padding:26px 0 18px;
-    }
-
-    .section-head h2{
-      margin:0;
-      font-size:13px;
-      font-weight:700;
-      letter-spacing:0.16em;
-    }
-
-    .section-head span{
-      font-size:12px;
-      color:var(--muted);
     }
 
     .grid{
@@ -125,7 +98,7 @@
 
     .card-top{
       display:flex;
-      justify-content:space-between;
+      justify-content:flex-start;
       align-items:flex-start;
       gap:12px;
     }
@@ -136,13 +109,6 @@
       line-height:1.18;
       letter-spacing:-0.03em;
       font-weight:700;
-    }
-
-    .card-no{
-      flex-shrink:0;
-      font-size:12px;
-      color:var(--muted);
-      padding-top:2px;
     }
 
     .card-desc{
@@ -160,66 +126,12 @@
       letter-spacing:0.08em;
     }
 
-    .company{
-      margin-top:64px;
-      padding-top:28px;
-      border-top:1px solid var(--line);
-      display:grid;
-      grid-template-columns:1.15fr 1fr;
-      gap:28px;
-    }
-
-    .company h3{
-      margin:0 0 14px;
-      font-size:13px;
-      font-weight:700;
-      letter-spacing:0.16em;
-    }
-
-    .company p{
-      margin:0;
-      font-size:15px;
-      line-height:1.95;
-      color:#202020;
-    }
-
-    .company ul{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:grid;
-      gap:12px;
-    }
-
-    .company li{
-      padding-bottom:12px;
-      border-bottom:1px solid var(--line);
-      font-size:14px;
-      line-height:1.8;
-      color:#202020;
-    }
-
-    footer{
-      margin-top:60px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      font-size:12px;
-      color:var(--muted);
-    }
-
     @media (max-width: 980px){
       .grid{grid-template-columns:repeat(3, minmax(0, 1fr));}
-      .company{grid-template-columns:1fr;}
     }
 
     @media (max-width: 720px){
       .wrap{padding:24px 16px 56px;}
-      .submark{display:none;}
-      .hero{padding:26px 0 38px;}
       .grid{grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px;}
       .card{min-height:148px; padding:18px;}
       .card-title{font-size:18px;}
@@ -228,8 +140,6 @@
 
     @media (max-width: 420px){
       .grid{grid-template-columns:1fr;}
-      .hero h1{font-size:42px;}
-      .hero p{font-size:14px;}
     }
   </style>
 </head>
@@ -238,13 +148,12 @@
     <header class="topbar">
       <div class="brand">B2B MRO COMMERCE</div>
     </header>
-    
+
     <section class="grid">
       <a class="card" href="https://www.almondyoung.com" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="card-top">
             <h3 class="card-title">미용재료</h3>
-            <div class="card-no">01</div>
           </div>
           <p class="card-desc">헤어, 네일, 피부, 속눈썹, 반영구 등 미용업 전반</p>
         </div>
@@ -255,7 +164,6 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">꽃집재료</h3>
-            <div class="card-no">02</div>
           </div>
           <p class="card-desc">화훼 부자재, 포장 자재, 리본, 플라워 자재</p>
         </div>
@@ -266,7 +174,6 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">떡집재료</h3>
-            <div class="card-no">03</div>
           </div>
           <p class="card-desc">떡 제조용 부재료, 포장재, 소도구, 운영 자재</p>
         </div>
@@ -277,7 +184,6 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">식당자재</h3>
-            <div class="card-no">04</div>
           </div>
           <p class="card-desc">주방기물, 소모품, 배달 포장재, 운영 집기</p>
         </div>
@@ -288,7 +194,6 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">숙박업소</h3>
-            <div class="card-no">05</div>
           </div>
           <p class="card-desc">객실 비품, 어메니티, 청소용품, 운영 소모품</p>
         </div>
@@ -299,7 +204,6 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">세탁방</h3>
-            <div class="card-no">06</div>
           </div>
           <p class="card-desc">세제, 기계 부자재, 운영용품, 매장 소모품</p>
         </div>
@@ -310,7 +214,6 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">선구용품</h3>
-            <div class="card-no">07</div>
           </div>
           <p class="card-desc">해양 장비, 선박 소모품, 선상 운영 자재</p>
         </div>
@@ -321,7 +224,6 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">치과재료</h3>
-            <div class="card-no">08</div>
           </div>
           <p class="card-desc">치과 소모품, 기구, 재료, 진료 운영 품목</p>
         </div>
@@ -332,7 +234,6 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">사무용품</h3>
-            <div class="card-no">09</div>
           </div>
           <p class="card-desc">오피스 소모품, 프린팅, 문구, 업무 환경 물품</p>
         </div>
@@ -343,7 +244,6 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">청소용품</h3>
-            <div class="card-no">10</div>
           </div>
           <p class="card-desc">세정제, 위생관리 제품, 매장 유지관리 소모품</p>
         </div>
@@ -354,7 +254,6 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">산업안전</h3>
-            <div class="card-no">11</div>
           </div>
           <p class="card-desc">안전장비, 보호구, 현장 필수 자재 및 소모품</p>
         </div>
@@ -365,23 +264,12 @@
         <div>
           <div class="card-top">
             <h3 class="card-title">ERP</h3>
-            <div class="card-no">12</div>
           </div>
           <p class="card-desc">구매, 재고, 회계, 영업, 생산을 연결하는 운영 소프트웨어</p>
         </div>
         <div class="card-link">ECOUNT ↗</div>
       </a>
     </section>
-
-    <section class="company">
-      <div>
-
-        </p>
-      </div>
-
-    </section>
-
-    </footer>
   </div>
 </body>
 </html>
