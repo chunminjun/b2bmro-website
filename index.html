@@ -16,6 +16,7 @@
 
     *{box-sizing:border-box;}
     html{scroll-behavior:smooth;}
+
     body{
       margin:0;
       background:var(--bg);
@@ -51,28 +52,6 @@
       letter-spacing:0.14em;
     }
 
-    .hero{
-      padding:34px 0 48px;
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-
-    .hero h1{
-      margin:0 0 18px;
-      font-size:clamp(42px, 8vw, 90px);
-      line-height:0.95;
-      letter-spacing:-0.055em;
-      font-weight:800;
-    }
-
-    .hero p{
-      margin:0;
-      max-width:780px;
-      font-size:clamp(15px, 2vw, 19px);
-      line-height:1.85;
-      color:#202020;
-    }
-
     .grid{
       display:grid;
       grid-template-columns:repeat(4, minmax(0, 1fr));
@@ -82,11 +61,11 @@
     .card{
       border:1px solid var(--line);
       background:#fff;
-      min-height:160px;
-      padding:22px;
+      padding:18px;
       display:flex;
       flex-direction:column;
-      justify-content:space-between;
+      justify-content:flex-start;
+      gap:10px;
       transition:transform .18s ease, background .18s ease, border-color .18s ease;
     }
 
@@ -112,34 +91,46 @@
     }
 
     .card-desc{
-      margin:14px 0 0;
+      margin:0;
       font-size:13px;
       line-height:1.75;
       color:var(--muted);
-      max-width:95%;
-    }
-
-    .card-link{
-      margin-top:18px;
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:0.08em;
+      max-width:100%;
     }
 
     @media (max-width: 980px){
-      .grid{grid-template-columns:repeat(3, minmax(0, 1fr));}
+      .grid{
+        grid-template-columns:repeat(3, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 720px){
-      .wrap{padding:24px 16px 56px;}
-      .grid{grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px;}
-      .card{min-height:148px; padding:18px;}
-      .card-title{font-size:18px;}
-      .card-desc{font-size:12px; max-width:100%;}
+      .wrap{
+        padding:24px 16px 56px;
+      }
+
+      .grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:12px;
+      }
+
+      .card{
+        padding:16px;
+      }
+
+      .card-title{
+        font-size:18px;
+      }
+
+      .card-desc{
+        font-size:12px;
+      }
     }
 
     @media (max-width: 420px){
-      .grid{grid-template-columns:1fr;}
+      .grid{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
@@ -151,122 +142,87 @@
 
     <section class="grid">
       <a class="card" href="https://www.almondyoung.com" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">미용재료</h3>
-          </div>
-          <p class="card-desc">헤어, 네일, 피부, 속눈썹, 반영구 등 미용업 전반</p>
+        <div class="card-top">
+          <h3 class="card-title">미용재료</h3>
         </div>
+        <p class="card-desc">헤어, 네일, 피부, 속눈썹, 반영구 등 미용업 전반</p>
       </a>
 
       <a class="card" href="https://" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">꽃자재</h3>
-          </div>
-          <p class="card-desc">화훼 부자재, 포장 자재, 리본, 플라워 자재</p>
+        <div class="card-top">
+          <h3 class="card-title">꽃자재</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">화훼 부자재, 포장 자재, 리본, 플라워 자재</p>
       </a>
 
       <a class="card" href="https:/" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">떡집재료</h3>
-          </div>
-          <p class="card-desc">떡 제조용 부재료, 포장재, 소도구, 운영 자재</p>
+        <div class="card-top">
+          <h3 class="card-title">떡집재료</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">떡 제조용 부재료, 포장재, 소도구, 운영 자재</p>
       </a>
 
       <a class="card" href="https://ozicme.kr/" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">식당자재</h3>
-          </div>
-          <p class="card-desc">주방기물, 소모품, 배달 포장재, 운영 집기</p>
+        <div class="card-top">
+          <h3 class="card-title">식당자재</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">주방기물, 소모품, 배달 포장재, 운영 집기</p>
       </a>
 
       <a class="card" href="https://" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">숙박업소</h3>
-          </div>
-          <p class="card-desc">객실 비품, 어메니티, 청소용품, 운영 소모품</p>
+        <div class="card-top">
+          <h3 class="card-title">숙박업소</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">객실 비품, 어메니티, 청소용품, 운영 소모품</p>
       </a>
 
       <a class="card" href="https://" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">세탁방</h3>
-          </div>
-          <p class="card-desc">세제, 기계 부자재, 운영용품, 매장 소모품</p>
+        <div class="card-top">
+          <h3 class="card-title">세탁방</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">세제, 기계 부자재, 운영용품, 매장 소모품</p>
       </a>
 
       <a class="card" href="https://" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">선구용품</h3>
-          </div>
-          <p class="card-desc">해양 장비, 선박 소모품, 선상 운영 자재</p>
+        <div class="card-top">
+          <h3 class="card-title">선구용품</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">해양 장비, 선박 소모품, 선상 운영 자재</p>
       </a>
 
-      <a class="card" href="https://mrdental.co.kr//" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">치과재료</h3>
-          </div>
-          <p class="card-desc">치과 소모품, 기구, 재료, 진료 운영 품목</p>
+      <a class="card" href="https://mrdental.co.kr/" target="_blank" rel="noopener noreferrer">
+        <div class="card-top">
+          <h3 class="card-title">치과재료</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">치과 소모품, 기구, 재료, 진료 운영 품목</p>
       </a>
 
       <a class="card" href="https://www." target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">사무용품</h3>
-          </div>
-          <p class="card-desc">오피스 소모품, 프린팅, 문구, 업무 환경 물품</p>
+        <div class="card-top">
+          <h3 class="card-title">사무용품</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">오피스 소모품, 프린팅, 문구, 업무 환경 물품</p>
       </a>
 
       <a class="card" href="https://www." target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">청소용품</h3>
-          </div>
-          <p class="card-desc">세정제, 위생관리 제품, 매장 유지관리 소모품</p>
+        <div class="card-top">
+          <h3 class="card-title">청소용품</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">세정제, 위생관리 제품, 매장 유지관리 소모품</p>
       </a>
 
       <a class="card" href="https://" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">산업안전</h3>
-          </div>
-          <p class="card-desc">안전장비, 보호구, 현장 필수 자재 및 소모품</p>
+        <div class="card-top">
+          <h3 class="card-title">산업안전</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">안전장비, 보호구, 현장 필수 자재 및 소모품</p>
       </a>
 
       <a class="card" href="https://www.cntmart.com/" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="card-top">
-            <h3 class="card-title">카페용품</h3>
-          </div>
-          <p class="card-desc">원두, 부재료, 일회용품, 포장 자재, 매장 운영 용품</p>
+        <div class="card-top">
+          <h3 class="card-title">카페용품</h3>
         </div>
-        <div class="card-link"></div>
+        <p class="card-desc">원두, 부재료, 일회용품, 포장 자재, 매장 운영 용품</p>
       </a>
     </section>
   </div>
